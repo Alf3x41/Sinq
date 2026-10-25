@@ -20,7 +20,7 @@ Sinq je natívna aplikácia pre Windows na automatické zálohovanie uložených
 
 ## Inštalácia a prvé spustenie
 
-1. Spusti `Sinq-Setup-0.2.4.exe` z priečinka [dist](dist/).
+1. Spusti `Sinq-Setup-x.x.x.exe` z releases.
 2. Vyber jazyk a dokonči inštaláciu. Predvolené umiestnenie je `%LOCALAPPDATA%\Programs\Sinq`; administrátorské oprávnenia nie sú potrebné.
 3. Vyhľadaj hru a pridaj nájdený priečinok s uloženými pozíciami alebo ho vyber ručne.
 4. Voliteľne pripoj ďalší počítač. Tento krok môžeš preskočiť cez **Later**.
