@@ -1,6 +1,6 @@
 # Sinq
 
-![Verzia](https://img.shields.io/badge/verzia-0.2.4-blue) ![Platforma](https://img.shields.io/badge/platforma-Windows_10%20%7C%2011-0078D4) [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-green)](LICENSE)
+![Verzia](https://img.shields.io/badge/verzia-0.2.4-blue) ![Platforma](https://img.shields.io/badge/platforma-Windows_10%20%7C%2011-0078D4)
 
 Sinq je natívna aplikácia pre Windows na automatické zálohovanie uložených pozícií hier a ich prenos medzi počítačmi. Sleduje vybrané priečinky, uchováva históriu záloh a umožňuje obnoviť zvolenú verziu do nového priečinka.
 
