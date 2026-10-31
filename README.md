@@ -18,11 +18,19 @@ Pridaj hru, prepoj svoje PC a pokračuj tam, kde si skončil.
 
 ## Ukážky aplikácie
 
-![Knižnica, pripojené zariadenia, nastavenia a párovanie v štyroch témach Sinq](docs/screenshots/0.2.29/prehlad.png)
+![Knižnica, pripojené zariadenia, nastavenia a párovanie v štyroch témach Sinq](https://raw.githubusercontent.com/Alf3x41/Sinq/main/prehlad.png)
 
 Snímky sú zachytené priamo z aplikácie s ukážkovými údajmi. Každá používa inú tému; nadpisy a vonkajšie pozadie sú prezentačnou úpravou.
 
 [Samostatné screenshoty a pôvodné snímky](docs/screenshots/0.2.29/README.md) · [32-sekundové video ovládania vo Full HD](docs/video/Sinq-0.2.29-showcase.mp4)
+
+### Detaily chyby
+
+![Detaily chyby vo vzhľade Sinq](https://raw.githubusercontent.com/Alf3x41/Sinq/main/Sinq-0.2.29-error-details.png)
+
+### Úvodná obrazovka
+
+![Vycentrovaný úvod Sinq](https://raw.githubusercontent.com/Alf3x41/Sinq/main/Sinq-0.2.29-startup.png)
 
 ## Čo Sinq dokáže
 
@@ -121,4 +129,3 @@ Skript spustí testy, zostaví aplikáciu a vytvorí nový `Sinq-Setup-x.x.x.exe
 ## Licencia
 
 Sinq je dostupný pod licenciou [MIT](LICENSE).
-
