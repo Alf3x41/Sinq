@@ -2,13 +2,11 @@
 
 **Zálohuje vaše herné pozície.**
 
-**Verzia 0.2.29 · Windows · Predbežné vydanie**
-
 Sinq je aplikácia pre Windows, ktorá automaticky zálohuje uložené pozície hier a synchronizuje ich medzi počítačmi. Bez účtu, e-mailu a hesla.
 
 Pridaj hru, prepoj svoje PC a pokračuj tam, kde si skončil.
 
-[Stiahnuť Sinq 0.2.29](dist/Sinq-Setup-0.2.29.exe) · [Kontrolný súčet SHA256](dist/Sinq-Setup-0.2.29.exe.sha256) · [Poznámky k vydaniu](RELEASE_README.md)
+[Kontrolný súčet SHA256](dist/Sinq-Setup-0.2.29.exe.sha256) · [Poznámky k vydaniu](RELEASE_README.md)
 
 ## Novinky vo verzii 0.2.29
 
