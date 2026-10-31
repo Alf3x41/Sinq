@@ -1,170 +1,124 @@
 # Sinq
 
-![Verzia](https://img.shields.io/badge/verzia-0.2.4-blue) ![Platforma](https://img.shields.io/badge/platforma-Windows_10%20%7C%2011-0078D4)
+**Tvoje savy. Na tvojich PC.**
 
-Sinq je natívna aplikácia pre Windows na automatické zálohovanie uložených pozícií hier a ich prenos medzi počítačmi. Sleduje vybrané priečinky, uchováva históriu záloh a umožňuje obnoviť zvolenú verziu do nového priečinka.
+**Verzia 0.2.29 · Windows · Predbežné vydanie**
 
-> [!NOTE]
-> **Verzia 0.2.4 je vývojová ukážka.** Aplikácia aj inštalátor sú zatiaľ bez digitálneho podpisu.
+Sinq je aplikácia pre Windows, ktorá automaticky zálohuje uložené pozície hier a synchronizuje ich medzi počítačmi. Bez účtu, e-mailu a hesla.
+
+Pridaj hru, prepoj svoje PC a pokračuj tam, kde si skončil.
+
+[Stiahnuť Sinq 0.2.29](dist/Sinq-Setup-0.2.29.exe) · [Kontrolný súčet SHA256](dist/Sinq-Setup-0.2.29.exe.sha256) · [Poznámky k vydaniu](RELEASE_README.md)
+
+## Novinky vo verzii 0.2.29
+
+- **Nové detaily chyby** — panel podľa vybranej témy, zrozumiteľné zhrnutie a samostatné rolovateľné technické podrobnosti. Celý výpis možno označiť a skopírovať; panel sa zatvára tlačidlom alebo klávesom Escape.
+- **Vycentrovaný úvod** — logo, názov Sinq a podnázov sú usporiadané pod sebou na spoločnej osi. Krátka úvodná animácia plynulo prejde do aplikácie a pri obmedzených animáciách sa preskočí.
+- **Čistejšie zobrazenie chyby** — spodné oznámenie sa počas otvorených detailov skryje, takže sa neprekrývajú dve sady ovládacích prvkov.
+
+## Ukážky aplikácie
+
+![Knižnica, pripojené zariadenia, nastavenia a párovanie v štyroch témach Sinq](docs/screenshots/0.2.29/prehlad.png)
+
+Snímky sú zachytené priamo z aplikácie s ukážkovými údajmi. Každá používa inú tému; nadpisy a vonkajšie pozadie sú prezentačnou úpravou.
+
+[Samostatné screenshoty a pôvodné snímky](docs/screenshots/0.2.29/README.md) · [32-sekundové video ovládania vo Full HD](docs/video/Sinq-0.2.29-showcase.mp4)
 
 ## Čo Sinq dokáže
 
-- **Automatické zálohy:** zmeny v sledovanom priečinku spustia zálohovanie po krátkom ustálení zápisu. Zálohu možno vytvoriť aj ručne.
-- **História verzií:** rovnaký obsah sa ukladá iba raz; dokončené revízie zostávajú dostupné aj po odstránení pôvodného súboru.
-- **Bezpečná obnova:** pred obnovou overí kontrolné súčty a vytvorí nový priečinok `Sinq-restored-<id>`. Existujúce herné súbory neprepisuje.
-- **Knižnica hier:** vyhľadávanie v pribalenom katalógu, zisťovanie podporovaných umiestnení uložených pozícií a ručný výber priečinka.
-- **Sinq Pair:** spárovanie počítačov pomocou šesťmiestneho kódu a schválenia na existujúcom počítači.
-- **Sinq Cloud:** šifrovaný prenos záloh; vzdialené a konfliktné verzie sa ukladajú do histórie na vedomú obnovu.
-- **Beh na pozadí:** po zatvorení okna pokračuje samostatný proces bez vykresľovania rozhrania.
-- **Prispôsobenie:** štyri animované vzhľady, obmedzenie pohybu a jazykové katalógy vrátane slovenčiny a češtiny. Nedokončené preklady používajú anglický náhradný text.
+- **Automatické zálohovanie** — sleduje vybrané priečinky a zálohuje zmenené savy. Zálohu môžeš spustiť aj ručne.
+- **Sinq Pair** — prepojí počítače pomocou jednorazového šesťmiestneho kódu.
+- **Sinq Cloud** — automaticky prenáša šifrované zálohy medzi pripojenými PC a po výpadku pripojenia skúša synchronizáciu znova.
+- **História verzií** — lokálne zachováva staršie savy; cloud uchováva päť posledných verzií každej hry a vždy aktuálnu verziu.
+- **Novší save automaticky** — pri rozdielnych verziách tej istej hry použije novšiu celú verziu podľa času zmeny súborov. Staršiu kópiu zachová v histórii.
+- **Viac zariadení** — zobrazí pripojené PC a umožní odobrať ich prístup.
+- **Beh na pozadí** — zálohovanie pokračuje aj po zatvorení hlavného okna.
+- **Prispôsobenie** — animované vzhľady, obmedzenie animácií a podpora viacerých jazykov vrátane slovenčiny a češtiny.
+- **Nastavenia jednotlivých hier** — nenápadné tri bodky otvoria nastavenia ochrany a zmenu obalu hry.
+- **Prehľadný stav záloh** — pri hre vidíš existujúcu alebo chýbajúcu zálohu, priebeh práce, čakanie, pozastavenie či chybu. Počas zálohovania a prenosu sa zobrazuje kruhový indikátor.
 
-## Inštalácia a prvé spustenie
+## Začíname
 
-1. Spusti `Sinq-Setup-x.x.x.exe` z releases.
-2. Vyber jazyk a dokonči inštaláciu. Predvolené umiestnenie je `%LOCALAPPDATA%\Programs\Sinq`; administrátorské oprávnenia nie sú potrebné.
-3. Vyhľadaj hru a pridaj nájdený priečinok s uloženými pozíciami alebo ho vyber ručne.
-4. Voliteľne pripoj ďalší počítač. Tento krok môžeš preskočiť cez **Later**.
+1. Stiahni `Sinq-Setup-0.2.29.exe` a príslušný súbor `.sha256` z aktuálneho vydania. Lokálne zostavenia sú v priečinku [dist](dist/).
+2. Vyhľadaj hru v katalógu a pridaj nájdený priečinok so savmi alebo vyber priečinok ručne.
+3. Ak chceš synchronizovať druhé PC, vyber **Add PC**. Tento krok môžeš preskočiť cez **Later**.
+4. Na druhom počítači nainštaluj rovnakú aktuálnu verziu a pridaj tú istú hru.
 
-Inštalátor vytvorí odkazy v ponuke Štart a na ploche a nastaví spúšťanie pri prihlásení. Spúšťanie aj automatické zálohovanie možno upraviť v nastaveniach. Vypnutie automatického zálohovania ponecháva dostupnú ručnú zálohu.
+**Aktuálny inštalátor pri dokončení prvého kroku vymaže predchádzajúce lokálne údaje Sinq vrátane nastavení, lokálnych záloh a párovacích kľúčov. Pôvodné herné savy zostávajú zachované.** Po opätovnej inštalácii pridaj hry a prepoj PC nanovo. Predchádzajúce cloudové dáta sa tým automaticky neodstránia.
 
-Opätovná inštalácia obnoví predvolené nastavenia a vyprázdni zoznam pridaných hier pri zachovaní zvoleného jazyka. Herné súbory aj existujúce zálohy zostávajú zachované. Odinštalovanie ponechá nastavenia, lokálne zálohy aj herné priečinky.
+## Prepojenie počítačov
 
-## Spárovanie počítačov
+1. Na prvom PC otvor **Devices → Show code**.
+2. Na druhom PC vyber **Enter code** a zadaj zobrazených šesť číslic.
+3. Nechaj Devices otvorené na oboch počítačoch. Po zadaní poslednej číslice sa pripojenie dokončí automaticky.
 
-1. Na existujúcom počítači otvor **Devices → Show code**.
-2. Na druhom počítači vyber **Enter code** a zadaj šesťmiestny kód. Po zadaní poslednej číslice sa požiadavka odošle automaticky.
-3. Na existujúcom počítači porovnaj odtlačky zariadení a potvrď pripojenie.
+Kód sa generuje automaticky, platí **20 minút** a je jednorazový. Kliknutím na zobrazený kód môžeš vytvoriť nový. Zdieľaj ho iba s PC, ktoré chceš pripojiť.
 
-Kód platí 20 minút, po uplynutí platnosti sa obnoví a kliknutím na číslice možno vytvoriť nový. Správa zariadení a obnova prístupu sú dostupné v nastaveniach.
+Spodná šípka v Devices otvorí zoznam pripojených zariadení. Odobraté PC sa môže znovu pripojiť pomocou nového kódu.
 
-Klient predvolene používa službu opísanú v [prevádzkovej dokumentácii Oracle](docs/oracle-deployment.md). Používateľ nezadáva adresu služby, účet ani administrátorské prihlasovacie údaje. Lokálne kľúče chráni Windows DPAPI. Prenos vzdialenej zálohy neprepisuje živé uložené pozície hry.
+## Ako funguje synchronizácia
 
-## Spustenie zo zdrojového kódu
+Sinq zálohuje vybraný priečinok so savmi a pri dostupnom pripojení synchronizuje jeho obsah cez cloud. Na všetkých PC pridaj hru pod rovnakým názvom, aby sa jej zálohy priradili k sebe.
 
-### Požiadavky
+Keď sa verzie líšia, rozhoduje najnovší čas zmeny súborov vo vybranom priečinku. Sinq vyberá celú verziu savu; nespája vnútorný obsah herných súborov ani jednotlivé sloty z rôznych verzií. Pred použitím novšieho vzdialeného savu zachová aktuálnu miestnu kópiu v histórii.
 
-- Windows 10 alebo 11.
-- Stabilný Rust s nástrojmi MSVC a podporou edície 2024.
-- Visual Studio C++ Build Tools a Windows SDK.
-- Node.js 24 alebo novší pre integračné a protokolové testy.
-- npm pre vývoj a nasadenie voliteľného Cloudflare backendu.
+Pri rozdielnom obsahu s úplne rovnakým časom zostanú obe verzie zachované ako konflikt. Správny dátum a čas na počítačoch sú preto dôležité. Staršie zálohy bez času zmeny súborov používajú ako náhradný údaj čas vytvorenia zálohy.
 
-Nasledujúce príkazy spusti v koreňovom priečinku projektu:
+Ak má hra save otvorený na zápis, výmena sa odloží. Pre dokončenie synchronizácie hru zatvor a pred spustením na druhom PC over stav zálohy.
 
-```powershell
-cargo build --release -p sinq --locked
-.\target\release\sinq.exe
-```
+## Súkromie a prístup
 
-Na vývojové spustenie:
+Savy sa šifrujú na klientskom zariadení pred odoslaním. Server uchováva šifrovaný obsah; súkromné kľúče zostávajú na PC a lokálne poverenia chráni Windows DPAPI.
 
-```powershell
-cargo run -p sinq --locked
-```
+Sinq nevyžaduje registráciu. Prístup je viazaný na zariadenia a ich kľúče. Odobratie zariadenia zablokuje jeho ďalší prístup k službe; už stiahnuté miestne kópie tým nezmiznú.
 
-Ak systém nenájde `cargo`, skontroluj, či je `%USERPROFILE%\.cargo\bin` v premennej `PATH`.
+Lokálne zálohy fungujú aj bez internetu. Párovanie a cloudový prenos vyžadujú dostupné pripojenie a službu. Cloud má kapacitné limity; pri ich dosiahnutí zápis zlyhá namiesto automatického rozširovania úložiska.
 
-### Režimy aplikácie
+## Obnova a riešenie problémov
 
-Jeden spustiteľný súbor poskytuje rozhranie, proces na pozadí aj inštaláciu:
+V **Settings** môžeš spustiť zálohu, otvoriť priečinok záloh alebo obnoviť vybranú verziu do nového priečinka.
 
-```powershell
-.\target\release\sinq.exe --install
-.\target\release\sinq.exe --daemon
-.\target\release\sinq.exe --uninstall
-```
+Chybové hlásenia obsahujú vysvetlenie a otvoriteľné úplné podrobnosti s možnosťou kopírovania. Pri chybe pod hrou klikni na jej stav. Používateľské vysvetlenia chýb sú dostupné v 19 jazykoch; pôvodný technický výpis systému alebo servera zostáva nezmenený.
 
-Súbor pomenovaný `Sinq-Setup-<verzia>.exe` otvorí inštaláciu automaticky. Zámky procesov bránia súbežnému spusteniu viacerých bežných okien alebo viacerých procesov zálohovania nad rovnakými dátami.
+Pri hlásení problému uveď verziu Sinq, verziu Windows, názov hry, postup a podrobnosti chyby. Nezverejňuj párovací kód, obnovovací kľúč ani súkromné kľúče.
 
-## Dáta a obnova
+## Stav projektu
 
-Predvolené dátové umiestnenie:
+Sinq je vo fáze **pre-release**. Niektoré časti rozhrania používajú anglický náhradný text. Aktuálne zostavenie je bez digitálneho podpisu a Windows môže zobraziť upozornenie SmartScreen. [Informácie o podpisovaní](docs/windows-signing.md).
 
-```text
-%LOCALAPPDATA%\Sinq\data\
-├── settings.json       # nastavenia aplikácie
-└── backups\
-    ├── objects\        # obsah súborov identifikovaný SHA-256
-    └── manifests\      # popisy jednotlivých revízií
-```
+Mierka rozhrania sa prispôsobuje pracovnej ploche a DPI pri spustení. Pri presune na monitor s odlišnou mierkou môže byť potrebné aplikáciu znova otvoriť.
 
-Pre izolované testovanie možno nastaviť absolútnu cestu cez `SINQ_DATA_DIR`:
+Projekt obsahuje Oracle backend aj alternatívne nasadenie cez Cloudflare Workers, R2 a D1. Prevádzkové postupy sú v dokumentácii nižšie.
+
+- [Poznámky k aktuálnemu predbežnému vydaniu](RELEASE_README.md)
+- [Prevádzka Oracle backendu](docs/oracle-deployment.md)
+- [Nasadenie Cloudflare backendu](docs/cloud-deployment.md)
+
+## Overenie vydania 0.2.29
+
+Prešlo **69 Rust testov**, **6 testov serverového protokolu**, kontroly dlhých chybových hlásení v 19 jazykoch a 10 profilov rozlíšenia a DPI. Úvod bol skontrolovaný aj pri menšom okne; detaily chyby pri rozlíšení 720 × 480.
+
+Výsledný inštalátor prešiel izolovanými kontrolami zálohovania, ochrany pred duplicitným spustením a manuálneho zálohovania pri pozastavených automatických zálohách. Overená bola verzia EXE a SHA256. V tomto vydaní neprebehlo overenie živej cloudovej služby. [Podrobná správa vydania](docs/release-0.2.29.md).
+
+## Vývoj
+
+Projekt používa **Rust** a **Slint**. Na zostavenie potrebuješ Windows, Rust s MSVC nástrojmi a Node.js 24 alebo novší na protokolové testy.
 
 ```powershell
-$env:SINQ_DATA_DIR = Join-Path $PWD 'target\sinq-local-data'
-cargo run -p sinq --locked
-```
-
-> [!IMPORTANT]
-> Dátový priečinok Sinq nikdy nenastavuj na priečinok s hernými pozíciami.
-
-Po testovaní premennú v aktuálnom termináli zrušíš príkazom `Remove-Item Env:SINQ_DATA_DIR`.
-
-Zálohy používajú nemenné objekty a atómové publikovanie dokončených revízií. Ak sa súbor počas kontroly zmení alebo ho nemožno prečítať, pokus zlyhá a neskôr sa zopakuje s rastúcim odstupom.
-
-## Štruktúra projektu
-
-| Cesta | Obsah |
-| --- | --- |
-| `crates/core/` | Konfigurácia, sledovanie súborov, zálohy, obnova a cloudový klient |
-| `crates/desktop/` | Rozhranie Slint, katalóg hier, obrázky, inštalátor a integrácia s Windows |
-| `crates/service/` | Starší prototyp služby s odlišným párovaním a bezpečnostným modelom |
-| `cloud/` | Spoločný protokol, Oracle adaptér, voliteľný Cloudflare Worker, migrácie a testy |
-| `locales/` | Preklady vo formáte Fluent |
-| `scripts/` | Zostavenie vydania a overovacie skripty |
-| `docs/` | Technická dokumentácia, prevádzka a správy z overovania |
-| `dist/` | Inštalátory a kontrolné súčty vydaní |
-
-Desktop používa **Rust, Slint a Tokio**. Aktuálny Oracle backend používa Node.js, SQLite a súborové úložisko šifrovaných objektov. Voliteľné nasadenie na Cloudflare používa Worker, D1 a R2.
-
-## Overovanie a vydanie
-
-Základné kontroly:
-
-```powershell
-cargo fmt --all -- --check
 cargo test --workspace --locked
 node --test cloud/oracle.test.mjs cloud/worker.test.mjs
+cargo run -p sinq --locked
 ```
 
-Testy workspace vyžadujú Node.js pre lokálny HTTP integračný test. Test produkčnej služby je predvolene ignorovaný; postup jeho samostatného spustenia opisuje [dokumentácia Oracle](docs/oracle-deployment.md).
-
-Overenie rozhrania po vytvorení vývojovej zostavy:
+Nový inštalátor vytvoríš existujúcim release skriptom:
 
 ```powershell
-cargo build -p sinq --locked
-.\scripts\verify-layout.ps1
-.\scripts\verify-onboarding.ps1
-.\scripts\verify-pairing.ps1
+./scripts/release.ps1
 ```
 
-Skripty vytvárajú izolované dáta a zachytené snímky v `target/`. Ďalšie kontroly sú opísané v [dokumentácii overovania](docs/verification.md).
-
-Vytvorenie distribučného inštalátora:
-
-```powershell
-.\scripts\release.ps1
-```
-
-Skript spustí testy, zostaví aplikáciu a do `dist/` uloží inštalátor aj súbor `.sha256`. Verziu preberá z koreňového `Cargo.toml`. Ak rovnaké vydanie už existuje, skončí bez jeho prepísania. Vydavateľa možno nastaviť parametrom `-Publisher`; pri samostatnom zostavení sa používa premenná `SINQ_PUBLISHER`.
-
-## Obmedzenia vývojovej verzie
-
-- Sledovanie súborov nezaručuje transakčnú snímku celej hry počas zápisu viacerých súborov. Pri citlivých uložených pozíciách vytváraj zálohu po ukončení hry.
-- Katalóg nezaručuje úplné pokrytie každej hry. Nepodporované vzory ciest a pozície uložené iba v registri vyžadujú iný postup; pri dostupných súboroch možno vybrať presný priečinok ručne.
-- Lokálna história záloh sa automaticky nečistí a môže postupne zaberať viac miesta.
-- Cloudová služba má limity úložiska a prenosu. Aktuálne nasadenie nemá nezávislú zálohu mimo servera; zachovaj si lokálne kópie. Konkrétne limity uvádza [prevádzková dokumentácia](docs/oracle-deployment.md).
-- Inštalátory nie sú digitálne podpísané. Overenie rozloženia rozhrania nepotvrdzuje výkon na konkrétnom handhelde ani natívne ovládanie gamepadom.
-
-## Ďalšia dokumentácia
-
-- [Overenie vydania 0.2.4](docs/release-0.2.4.md)
-- [Prevádzka aktuálneho Oracle backendu](docs/oracle-deployment.md)
-- [Voliteľné nasadenie na Cloudflare](docs/cloud-deployment.md)
-- [Overovacie postupy](docs/verification.md)
-- [Architektúra a bezpečnostné hranice](docs/architecture.md) — obsahuje aj historický opis staršieho prototypu; pre aktuálny cloud použi prevádzkovú dokumentáciu a správu k vydaniu 0.2.4.
+Skript spustí testy, zostaví aplikáciu a vytvorí nový `Sinq-Setup-x.x.x.exe` s kontrolným súčtom SHA256. Existujúce vydania neprepisuje. Ďalšie kontroly rozhrania a zálohovania sú v priečinku [scripts](scripts/).
 
 ## Licencia
 
-Zdrojový kód Sinq je dostupný pod licenciou [MIT](LICENSE). Závislosti si ponechávajú vlastné licencie. Oznámenie k pribalenému katalógu je v [catalog-LICENSE.txt](crates/desktop/assets/catalog-LICENSE.txt). Pred verejnou distribúciou skontroluj licenčné podmienky Slint.
+Sinq je dostupný pod licenciou [MIT](LICENSE).
 
