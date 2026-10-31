@@ -1,6 +1,6 @@
 # Sinq
 
-**Tvoje savy. Na tvojich PC.**
+**Zálohuje vaše herné pozície.**
 
 **Verzia 0.2.29 · Windows · Predbežné vydanie**
 
@@ -23,14 +23,6 @@ Pridaj hru, prepoj svoje PC a pokračuj tam, kde si skončil.
 Snímky sú zachytené priamo z aplikácie s ukážkovými údajmi. Každá používa inú tému; nadpisy a vonkajšie pozadie sú prezentačnou úpravou.
 
 [Samostatné screenshoty a pôvodné snímky](docs/screenshots/0.2.29/README.md) · [32-sekundové video ovládania vo Full HD](docs/video/Sinq-0.2.29-showcase.mp4)
-
-### Detaily chyby
-
-![Detaily chyby vo vzhľade Sinq](https://raw.githubusercontent.com/Alf3x41/Sinq/main/Sinq-0.2.29-error-details.png)
-
-### Úvodná obrazovka
-
-![Vycentrovaný úvod Sinq](https://raw.githubusercontent.com/Alf3x41/Sinq/main/Sinq-0.2.29-startup.png)
 
 ## Čo Sinq dokáže
 
